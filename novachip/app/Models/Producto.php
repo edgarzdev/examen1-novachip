@@ -7,9 +7,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Producto extends Model
 {
-     use HasFactory;
+    use HasFactory;
 
-    protected $fillable = ['nombre', 'precio', 'marca_id'];
+    protected $fillable = [
+        'nombre',
+        'precio',
+        'descripcion',
+        'imagen',
+        'disponible',
+        'marca_id',
+    ];
 
     public function marca()
     {
