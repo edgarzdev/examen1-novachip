@@ -16,12 +16,11 @@ return new class extends Migration
             $table->string('nombre');
             $table->decimal('precio', 8, 2);
             $table->text('descripcion')->nullable();
-            $table->decimal('precio', 8, 2);
             $table->string('imagen')->nullable();
             $table->boolean('disponible')->default(true);
+            $table->unsignedBigInteger('marca_id');
             $table->timestamps();
-
-
+            
             $table->foreign('marca_id')->references('id')->on('marca')->onDelete('cascade');
         });
     }
