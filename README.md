@@ -52,3 +52,43 @@ Este proyecto es una API RESTful desarrollada en **Laravel 12** que permite gest
    ```
 
 ---
+## 🔐 Autenticación (Laravel Sanctum)
+
+### Registro
+`POST /api/register`
+
+**Body:**
+```json
+{
+  "name": "Juan Pérez",
+  "email": "juan@example.com",
+  "password": "12345678"
+}
+```
+
+### Login
+`POST /api/login`
+
+**Body:**
+```json
+{
+  "email": "juan@example.com",
+  "password": "12345678"
+}
+```
+
+**Respuesta:**
+```json
+{
+  "user": {
+    "id": 1,
+    "name": "Juan Pérez"
+  },
+  "token": "eyJ0eXAiOiJKV1QiLC..."
+}
+```
+
+Agrega el token en tus peticiones:
+```
+Authorization: Bearer TU_TOKEN
+```
