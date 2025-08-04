@@ -92,3 +92,28 @@ Agrega el token en tus peticiones:
 ```
 Authorization: Bearer TU_TOKEN
 ```
+---
+## 📦 Endpoints de Productos
+
+| Método | Ruta                  | Descripción                          | 
+|--------|-----------------------|--------------------------------------|
+| GET    | `/api/productos`      | Listar todos los productos           |
+| GET    | `/api/productos/{id}` | Ver un producto por ID               |
+| POST   | `/api/productos`      | Crear nuevo producto                 |
+| PUT    | `/api/productos/{id}` | Actualizar producto existente        |
+| DELETE | `/api/productos/{id}` | Eliminar un producto                 |
+
+### Ejemplo de creación (`POST /api/productos`)
+```json
+{
+  "nombre": "RTX 4090",
+  "precio": 1599.99,
+  "descripcion": "Tarjeta gráfica de última generación",
+  "imagen": "rtx4090.jpg",
+  "disponible": true,
+  "marca_id": 2
+}
+```
+
+---
+
