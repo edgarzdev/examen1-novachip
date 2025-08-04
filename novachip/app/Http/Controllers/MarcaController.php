@@ -55,18 +55,25 @@ class MarcaController extends Controller
 
         return response()->json(
             [
-                'mensaje'=>'Marca actualizada correctamente',
-                'marca' =>$marca
+                'mensaje' => 'Marca actualizada correctamente',
+                'marca' => $marca
             ],
             200
         );
     }
 
     // Eliminar una marca
-    public function destroy(Marca $marca)
+    public function destroy(string $id)
     {
+        $marca = Marca::find($id);
+        if (!$marca) {
+            return response()->json([
+                'mensaje' => 'marca no encontrada'
+            ], 404);
+        }
         $marca->delete();
-
-        return response()->json(['mensaje' => 'Marca eliminada'], 200);
+        return response()->json([
+            'mensaje' => 'marca eliminada correctamente'
+        ], 200);
     }
 }
