@@ -17,3 +17,38 @@ Este proyecto es una API RESTful desarrollada en **Laravel 12** que permite gest
 - Laravel Sanctum (autenticación)
 - Postman (para pruebas)
 
+---
+
+## ⚙️ Instalación del proyecto
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/edgarzdev/examen1-novachip.git
+   cd tu-proyecto
+   ```
+
+2. Instala dependencias:
+   ```bash
+   composer install
+   ```
+
+3. Crea archivo de entorno: (de acuerdo al env de ejemplo)
+
+4. Configura tu base de datos en el archivo `.env`:
+   ```env
+   DB_DATABASE=api_productos
+   DB_USERNAME=root
+   DB_PASSWORD=
+   ```
+
+5. Ejecuta las migraciones y seeders:
+   ```bash
+   php artisan migrate --seed
+   ```
+
+6. Levanta el servidor:
+   ```bash
+   php artisan serve
+   ```
+
+---
