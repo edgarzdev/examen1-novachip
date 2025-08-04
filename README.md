@@ -117,3 +117,19 @@ Authorization: Bearer TU_TOKEN
 
 ---
 
+## 🧠 Estructura de base de datos
+
+**Productos**
+- id
+- nombre
+- precio
+- descripcion
+- imagen
+- disponible
+- marca_id (FK)
+
+**Marcas**
+- id
+- nombre
+
+---
